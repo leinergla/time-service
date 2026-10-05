@@ -12,9 +12,9 @@ app.MapScalarApiReference();
 
 app.UseHttpsRedirection();
 
-app.MapGet("/time", () => 
-{
-    return new 
+app.MapGet("/time", () =>
+{  //returns the current UTC time and the timezone
+    return new
     {
         CurrentTime = DateTime.UtcNow,
         TimeZone = "UTC"
